@@ -179,8 +179,9 @@ class VirtualTreeVideo(Scene):
         heading = make_heading("¿Qué es un Virtual Tree?")
         caption = make_caption([
             "Es un árbol enraizado que se construye a partir de un árbol original y de k nodos clave.",
-            "Conserva las claves y los ancestros comunes (LCA) que mantienen sus relaciones de ancestro.",
-            "Sirve para responder consultas sobre pocos nodos de un árbol fijo, y tiene a lo más 2k − 1 nodos.",
+            "Conserva las claves y los ancestros comunes (LCA), y tiene a lo más 2k − 1 nodos.",
+            "TDA: árbol estático con las operaciones Build(S), Parent(v), Children(v) y Edges().",
+            "Sirve para responder consultas sobre pocos nodos de un árbol fijo.",
         ])
         self.play(FadeIn(heading, shift=DOWN * 0.15), Write(caption), run_time=1)
 
@@ -386,8 +387,12 @@ class VirtualTreeVideo(Scene):
         )
         if table.width > config.frame_width - 1:
             table.scale_to_fit_width(config.frame_width - 1)
-        table.next_to(heading, DOWN, buff=0.5)
+        max_height = config.frame_height - 1.8
+        if table.height > max_height:
+            table.scale_to_fit_height(max_height)
+        table.next_to(heading, DOWN, buff=0.35)
         self.play(FadeIn(heading))
+        self.play(Create(VGroup(table.get_horizontal_lines(), table.get_vertical_lines())), run_time=1)
         self.play(LaggedStart(*[FadeIn(row) for row in table.get_rows()], lag_ratio=0.3))
         self.wait(WAIT["complexity"])
         self.play(FadeOut(VGroup(heading, table)))
