@@ -24,3 +24,6 @@ env/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+animacion/media/
+__pycache__/

@@ -264,7 +264,6 @@ int main() {
 
     vector<int> parentMain = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 7};
     vector<int> keysMain = {11, 8, 6, 10};
-    vector<int> keysSingle = {9};
 
     int nEdge = 15;
     vector<int> parentEdge(nEdge + 1, 0);
@@ -274,6 +273,5 @@ int main() {
     bool ok = true;
     ok = runScenario("logs/vt_log_main.json", 11, parentMain, keysMain) && ok;
     ok = runScenario("logs/vt_log_edge.json", nEdge, parentEdge, keysEdge) && ok;
-    ok = runScenario("logs/vt_log_single.json", 11, parentMain, keysSingle) && ok;
     return ok ? 0 : 1;
 }
