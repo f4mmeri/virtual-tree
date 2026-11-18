@@ -3,11 +3,11 @@ Proyecto Estructura asignada: Virtual Tree (Auxiliary Tree)
 
 ## Contenido del repositorio
 
-* `virtual_tree.cpp` — implementación instrumentada del Virtual Tree. Cada paso de `build` (orden de las claves, cálculo de LCA, operaciones sobre la pila y aristas virtuales) se registra en un archivo JSON dentro de `logs/`.
-* `logs/` — trazas generadas por `virtual_tree.cpp`: `vt_log_main.json` (caso principal) y `vt_log_edge.json` (caso borde: claves en una cadena).
-* `animacion/virtual_tree.py` — script de Manim que lee los archivos de `logs/` y genera el video.
-* `animacion/audio/` — narración grabada por escena, más `narracion_completa.m4a` (los 8 audios ya unidos).
-* `VirtualTreeVideo_final.mp4` — video final con audio, entregado como parte de este proyecto.
+* `virtual_tree.cpp`: implementación instrumentada del Virtual Tree. Cada paso de `build` (orden de las claves, cálculo de LCA, operaciones sobre la pila y aristas virtuales) se registra en un archivo JSON dentro de `logs/`.
+* `logs/`: trazas generadas por `virtual_tree.cpp`: `vt_log_main.json` (caso principal) y `vt_log_edge.json` (caso borde: claves en una cadena).
+* `animacion/virtual_tree.py`: script de Manim que lee los archivos de `logs/` y genera el video.
+* `animacion/audio/`: narración grabada por escena, más `narracion_completa.m4a` (los 8 audios ya unidos).
+* `VirtualTreeVideo_final.mp4`: video final con audio, entregado como parte de este proyecto.
 
 ## Software requerido
 
