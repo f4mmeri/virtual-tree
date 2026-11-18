@@ -12,13 +12,14 @@ LOGS_DIR = os.path.join(BASE_DIR, "..", "logs")
 AUDIO_DIR = os.path.join(BASE_DIR, "audio")
 
 WAIT = {
-    "opening": 1,
-    "concept": 10,
-    "dfs": 6,
-    "sort": 8,
-    "stack": 4,
-    "chain": 4,
-    "complexity": 12,
+    "opening": 2.7,
+    "concept": 45,
+    "dfs": 11.5,
+    "sort": 15.5,
+    "stack": 0.3,
+    "chain": 5.5,
+    "complexity": 36.5,
+    "credits": 3,
 }
 
 
@@ -402,3 +403,4 @@ class VirtualTreeVideo(Scene):
         members = Text(MEMBERS, font_size=24)
         credits = VGroup(title, members).arrange(DOWN, buff=0.4)
         self.play(FadeIn(credits, shift=UP * 0.2))
+        self.wait(WAIT["credits"])
